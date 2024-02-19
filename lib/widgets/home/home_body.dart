@@ -192,12 +192,25 @@ class _HomeBodyState extends State<HomeBody> {
                           child: Column(
                             children: [
                               Container(
+                                alignment: Alignment.bottomLeft,
                                 height: 300,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   image: const DecorationImage(
                                     image: AssetImage('assets/husky.jpeg'),
                                     fit: BoxFit.cover,
+                                  ),
+                                ),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10, vertical: 5),
+                                  color: Colors.amber,
+                                  child: const Text(
+                                    '245 \$',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: Colors.white,
+                                    ),
                                   ),
                                 ),
                               ),
