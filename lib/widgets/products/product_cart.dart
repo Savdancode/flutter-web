@@ -1,3 +1,5 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 
 class ProductCart extends StatefulWidget {
@@ -12,15 +14,16 @@ class ProductCart extends StatefulWidget {
 class _ProductCartState extends State<ProductCart> {
   bool _isHovered = false;
 
+  double _scale = 1.0;
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
+      onEnter: (_) => setState(() => _scale = 1.02),
+      onExit: (_) => setState(() => _scale = 1.0),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         curve: Curves.easeInOut,
-        transform: _isHovered ? Matrix4.skewY(0.0) : null,
+        transform: Matrix4.identity()..scale(_scale),
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
