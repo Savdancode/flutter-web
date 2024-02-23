@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_shop/views/home_page.dart';
+import 'package:web_shop/views/products/product_detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,10 @@ class MyApp extends StatelessWidget {
           selectionColor: Colors.cyan.withAlpha(100),
         ),
       ),
+      initialRoute: '/',
+      routes: {
+        '/product': (context) => ProductDetailScreen(),
+      },
       home: const HomePage(title: 'Pu Heng Shop'),
     );
   }

@@ -25,8 +25,7 @@ class _HomeBodyState extends State<HomeBody> {
           ? EdgeInsets.symmetric(
               horizontal: widget.maxWidth * 0.15, vertical: 15)
           : const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-      child: ListView(
-        scrollDirection: Axis.vertical,
+      child: Column(
         children: [
           Container(
             alignment: Alignment.center,
@@ -187,7 +186,7 @@ class _HomeBodyState extends State<HomeBody> {
                     }),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

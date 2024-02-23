@@ -17,10 +17,14 @@ class CustomAppBar extends AppBar {
                 SizedBox(
                   width: maxWidth > 1200 ? maxWidth * 0.15 : 0,
                 ),
-                const Icon(
-                  Icons.ac_unit,
-                  size: 30,
-                  color: Colors.deepOrange,
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage('assets/kaiheng.jpeg'),
+                      )),
                 ),
                 const SizedBox(
                   width: 10,
